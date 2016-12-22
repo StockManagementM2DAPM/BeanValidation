@@ -14,10 +14,23 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 /**
  * Created by toms on 12/22/16.
  */
+
+/**
+ * Validator for FullName's lastname attribute instance ->
+ *                                                          Teacher
+ */
 @Target({FIELD, PARAMETER})
 @Retention(RUNTIME)
 @Constraint(validatedBy = {LastnameValidator.class})
 public @interface ValidLastName {
+
+    /**
+     * Default message if FullName's lastname attribute instance not consistent
+     *  message captured with  Set<ConstraintViolation<ITeacher>> in JPAEntities
+     *              see JPAEntities/Test/.../ValidationTest.java
+     * @return
+     */
+    // TODO gets message from ValidationMessages.properties (don't know why can't take it...)
     String message() default "La taille du nom doit etre comprise entre 2 et 30 caracteres";
 
     Class<?>[] groups() default {};

@@ -14,13 +14,15 @@ public class LastnameValidator implements ConstraintValidator<ValidLastName, Str
     public void initialize(ValidLastName validFirstName) {
     }
 
+    /**
+     * Defines conditions to have for validate Fullname's lastname attribute instance
+     * @param lastname
+     * @param constraintValidatorContext
+     * @return
+     */
     @Override
     public boolean isValid(String lastname, ConstraintValidatorContext constraintValidatorContext) {
-        if(lastname == null)
-        {
-            return false;
-        };
-        if((lastname.length() < 2 )||(lastname.length() > 31))
+        if((lastname == null||lastname.length() < 2 )||(lastname.length() > 31))
         {
             return false;
         };

@@ -14,10 +14,23 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 /**
  * Created by toms on 12/22/16.
  */
+
+/**
+ * Validator for Information's description attribute instance ->
+ *              BoardMark ChalkBox Computer Equipment SlideProjector Classroom School
+ */
 @Target({FIELD, PARAMETER})
 @Retention(RUNTIME)
 @Constraint(validatedBy = {ObjectDescriptionValidator.class})
 public @interface Description {
+
+    /**
+     * Default message if Information's description attribute instance not consistent
+     *          message captured with  Set<ConstraintViolation<IInformation>> in JPAEntities
+     *              see JPAEntities/Test/.../ValidationTest.java
+     * @return
+     */
+    // TODO gets message from ValidationMessages.properties (don't know why can't take it...)
     String message() default "La description de l'objet doit etre comprise entre 10 et 200 caracteres";
 
     Class<?>[] groups() default {};

@@ -15,6 +15,12 @@ public class ObjectNameValidator implements ConstraintValidator<Name, String> {
     public void initialize(Name nameDescription) {
     }
 
+    /**
+     * Defines conditions to have for validate Information's name attribute instance
+     * @param name
+     * @param constraintValidatorContext
+     * @return
+     */
     @Override
     public boolean isValid(String name, ConstraintValidatorContext constraintValidatorContext) {
         if (name == null || name.length() < 4 || name.length() > 200){

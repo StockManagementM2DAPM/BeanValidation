@@ -17,7 +17,7 @@ public class ObjectDescriptionValidator implements ConstraintValidator<Descripti
 
     /**
      * Defines conditions to have for validate Information's description attribute instance
-     * @param desc
+     * @param desc 
      * @param constraintValidatorContext
      * @return
      */

@@ -3,7 +3,7 @@
 
 
   <artifactId>BeanValidation</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0-beanvalidation_internationalization__dev-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>beans</name>
 

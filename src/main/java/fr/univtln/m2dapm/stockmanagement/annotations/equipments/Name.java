@@ -30,8 +30,7 @@ public @interface Name {
      *              see JPAEntities/Test/.../ValidationTest.java
      * @return
      */
-    // TODO gets message from ValidationMessages.properties (don't know why can't take it...)
-    String message() default "Le nom de l'objet doit contenir entre 4 et 200 caracteres";
+    String message() default "{object.name.size}";
 
     Class<?>[] groups() default {};
 

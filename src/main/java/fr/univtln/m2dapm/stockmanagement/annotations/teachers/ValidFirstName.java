@@ -32,8 +32,7 @@ public @interface ValidFirstName {
      *              see JPAEntities/Test/.../ValidationTest.java
      * @return
      */
-    // TODO gets message from ValidationMessages.properties (don't know why can't take it...)
-    String message() default "La taille du prenom doit etre comprise entre 2 et 30 caracteres";
+    String message() default "{teacher.firstname.size}";
 
     Class<?>[] groups() default {};
 

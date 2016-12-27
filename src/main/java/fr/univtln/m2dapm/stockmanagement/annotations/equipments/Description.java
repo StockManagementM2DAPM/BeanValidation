@@ -30,8 +30,7 @@ public @interface Description {
      *              see JPAEntities/Test/.../ValidationTest.java
      * @return
      */
-    // TODO gets message from ValidationMessages.properties (don't know why can't take it...)
-    String message() default "La description de l'objet doit etre comprise entre 10 et 200 caracteres";
+    String message() default "{object.description.size}";
 
     Class<?>[] groups() default {};
 
